@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 let config;
 
 config = {
-  entry: "./src/index.js",
+  entry: "src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -38,7 +38,7 @@ config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: "public/index.html",
       filename: "index.html",
     }),
     new MiniCssExtractPlugin({
