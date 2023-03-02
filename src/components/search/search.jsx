@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { AsyncPaginate } from "react-select-async-paginate";
 import { GEO_API_URL, geoApiOptions } from "./api";
@@ -17,9 +18,9 @@ const Search = ({ onSearchChange }) => {
             return {
               value: `${city.latitude} ${city.longitude}`,
               label: `${city.name} ${city.countryCode}`,
-            }
-          })
-        }
+            };
+          }),
+        };
       })
       .catch((err) => console.error(err));
   };
